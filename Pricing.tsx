@@ -44,3 +44,35 @@ function PricingPage() {
       });
     });
   };
+return(
+   {/* PRO */}
+          <div className="ring-2 ring-indigo-600 rounded-3xl p-8">
+            <h3 className="text-lg font-semibold leading-8 text-indigo-600">
+              Pro Plan
+            </h3>
+            <p className="mt-4 text-sm leading-6 text-gray-600">
+              Maximize Productivity with PRO Features
+            </p>
+            <p className="mt-6 flex items-baseline gap-x-1">
+              <span className="text-4xl font-bold tracking-tight text-gray-900">
+                $5.99
+              </span>
+              <span className="text-sm font-semibold leading-6 text-gray-600">
+                / month
+              </span>
+            </p>
+
+            <Button
+              className="bg-indigo-600 w-full text-white shadow-sm hover:bg-indigo-500 mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              disabled={loading || isPending}
+              onClick={handleUpgrade}
+            >
+              {isPending || loading
+                ? "Loading..."
+                : hasActiveMembership
+                ? "Manage Plan"
+                : "Upgrade to Pro"}
+            </Button>
+
+  )
+  }
